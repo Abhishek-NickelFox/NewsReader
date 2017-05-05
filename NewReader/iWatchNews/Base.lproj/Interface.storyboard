@@ -12,6 +12,9 @@
         <array key="SanFranciscoDisplay-Regular.otf">
             <string>SanFranciscoDisplay-Regular</string>
         </array>
+        <array key="SanFranciscoText-Regular.otf">
+            <string>SanFranciscoText-Regular</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Interface Controller-->
@@ -22,19 +25,27 @@
                         <table alignment="left" id="uQn-48-ii2">
                             <items>
                                 <tableRow identifier="SourceRow" id="oE1-yU-ezr" customClass="NewsRowController" customModule="iWatchNews_Extension">
-                                    <group key="rootItem" width="1" height="60" alignment="left" id="9LS-UA-7V6">
+                                    <group key="rootItem" width="1" height="60" alignment="left" layout="vertical" id="9LS-UA-7V6">
                                         <items>
-                                            <imageView width="40" height="40" alignment="left" id="lVv-FB-rjo">
-                                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                            </imageView>
-                                            <label width="81" height="15" alignment="left" text="Label" textAlignment="left" id="t1x-JX-yEM">
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                                <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="10"/>
+                                            <group width="1" height="27" alignment="left" id="Mly-kw-T3Y">
+                                                <items>
+                                                    <imageView width="22" height="21" alignment="left" id="lVv-FB-rjo">
+                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </imageView>
+                                                    <label width="100" height="22" alignment="left" text="Label" textAlignment="left" id="t1x-JX-yEM">
+                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="font" name="SanFranciscoDisplay-Regular" family="San Francisco Display" pointSize="10"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <label width="130" height="24" alignment="left" text="Label" id="ccc-mJ-SLz">
+                                                <fontDescription key="font" name="SanFranciscoText-Regular" family="San Francisco Text" pointSize="6"/>
                                             </label>
                                         </items>
                                         <color key="backgroundColor" red="0.67832280262864275" green="0.59501464746940114" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </group>
                                     <connections>
+                                        <outlet property="descLabel" destination="ccc-mJ-SLz" id="lat-PI-vE0"/>
                                         <outlet property="imgView" destination="lVv-FB-rjo" id="fkY-HK-92N"/>
                                         <outlet property="textLabel" destination="t1x-JX-yEM" id="Y4T-Uf-JPd"/>
                                     </connections>
