@@ -28,6 +28,20 @@
 		463BBB301E392DD600D2BD80 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 463BBB2F1E392DD600D2BD80 /* QuartzCore.framework */; };
 		466CEC381E37D6A9005804CF /* NRArticleDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CEC371E37D6A9005804CF /* NRArticleDetailVC.swift */; };
 		466CEC3A1E37E593005804CF /* NRSourceDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466CEC391E37E593005804CF /* NRSourceDetailVC.swift */; };
+		466E33881EBC56360099276B /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 466E33861EBC56360099276B /* Interface.storyboard */; };
+		466E338A1EBC56360099276B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466E33891EBC56360099276B /* Assets.xcassets */; };
+		466E33911EBC56360099276B /* iWatchNews Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 466E33901EBC56360099276B /* iWatchNews Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		466E33981EBC56360099276B /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E33971EBC56360099276B /* InterfaceController.swift */; };
+		466E339A1EBC56360099276B /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E33991EBC56360099276B /* ExtensionDelegate.swift */; };
+		466E339C1EBC56360099276B /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E339B1EBC56360099276B /* NotificationController.swift */; };
+		466E339E1EBC56360099276B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 466E339D1EBC56360099276B /* Assets.xcassets */; };
+		466E33A21EBC56360099276B /* iWatchNews.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 466E33841EBC56360099276B /* iWatchNews.app */; };
+		466E33AB1EBC5DB20099276B /* NRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DED1E3665A7001FEE5B /* NRNetworkManager.swift */; };
+		466E33AC1EBC5DB20099276B /* NRHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DEB1E366557001FEE5B /* NRHTTPRequest.swift */; };
+		466E33AD1EBC5DB20099276B /* NRHTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DEF1E366BA1001FEE5B /* NRHTTPResponse.swift */; };
+		466E33AE1EBC65730099276B /* NRArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DF11E36705D001FEE5B /* NRArticle.swift */; };
+		466E33AF1EBC65730099276B /* NRSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DF71E3699AA001FEE5B /* NRSource.swift */; };
+		466E33B11EBC66A60099276B /* NewsRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466E33B01EBC66A60099276B /* NewsRowController.swift */; };
 		466F6DEC1E366557001FEE5B /* NRHTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DEB1E366557001FEE5B /* NRHTTPRequest.swift */; };
 		466F6DEE1E3665A7001FEE5B /* NRNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DED1E3665A7001FEE5B /* NRNetworkManager.swift */; };
 		466F6DF01E366BA1001FEE5B /* NRHTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466F6DEF1E366BA1001FEE5B /* NRHTTPResponse.swift */; };
@@ -72,6 +86,20 @@
 			remoteGlobalIDString = 462CD6151E3A98E1001ADB0E;
 			remoteInfo = NewsiMsgExtension;
 		};
+		466E33921EBC56360099276B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46D7F9B91E36633200A453E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 466E338F1EBC56360099276B;
+			remoteInfo = "iWatchNews Extension";
+		};
+		466E33A01EBC56360099276B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 46D7F9B91E36633200A453E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 466E33831EBC56360099276B;
+			remoteInfo = iWatchNews;
+		};
 		46D7F9D91E36633200A453E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 46D7F9B91E36633200A453E3 /* Project object */;
@@ -100,6 +128,28 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		466E33A81EBC56360099276B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				466E33911EBC56360099276B /* iWatchNews Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		466E33AA1EBC56360099276B /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				466E33A21EBC56360099276B /* iWatchNews.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +174,18 @@
 		463BBB2F1E392DD600D2BD80 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		466CEC371E37D6A9005804CF /* NRArticleDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRArticleDetailVC.swift; sourceTree = "<group>"; };
 		466CEC391E37E593005804CF /* NRSourceDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRSourceDetailVC.swift; sourceTree = "<group>"; };
+		466E33841EBC56360099276B /* iWatchNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iWatchNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		466E33871EBC56360099276B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		466E33891EBC56360099276B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		466E338B1EBC56360099276B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		466E33901EBC56360099276B /* iWatchNews Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "iWatchNews Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		466E33961EBC56360099276B /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		466E33971EBC56360099276B /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		466E33991EBC56360099276B /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		466E339B1EBC56360099276B /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		466E339D1EBC56360099276B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		466E339F1EBC56360099276B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		466E33B01EBC66A60099276B /* NewsRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsRowController.swift; sourceTree = "<group>"; };
 		466F6DEB1E366557001FEE5B /* NRHTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRHTTPRequest.swift; sourceTree = "<group>"; };
 		466F6DED1E3665A7001FEE5B /* NRNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNetworkManager.swift; sourceTree = "<group>"; };
 		466F6DEF1E366BA1001FEE5B /* NRHTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRHTTPResponse.swift; sourceTree = "<group>"; };
@@ -179,6 +241,13 @@
 			files = (
 				462CD6181E3A98E1001ADB0E /* Messages.framework in Frameworks */,
 				E27512D10F10924624100319 /* Pods_NewsiMsgExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		466E338D1EBC56360099276B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +329,38 @@
 			name = NRNewsDetail;
 			sourceTree = "<group>";
 		};
+		466E33851EBC56360099276B /* iWatchNews */ = {
+			isa = PBXGroup;
+			children = (
+				466E33861EBC56360099276B /* Interface.storyboard */,
+				466E33891EBC56360099276B /* Assets.xcassets */,
+				466E338B1EBC56360099276B /* Info.plist */,
+			);
+			path = iWatchNews;
+			sourceTree = "<group>";
+		};
+		466E33941EBC56360099276B /* iWatchNews Extension */ = {
+			isa = PBXGroup;
+			children = (
+				466E33B01EBC66A60099276B /* NewsRowController.swift */,
+				466E33971EBC56360099276B /* InterfaceController.swift */,
+				466E33991EBC56360099276B /* ExtensionDelegate.swift */,
+				466E339B1EBC56360099276B /* NotificationController.swift */,
+				466E339D1EBC56360099276B /* Assets.xcassets */,
+				466E339F1EBC56360099276B /* Info.plist */,
+				466E33951EBC56360099276B /* Supporting Files */,
+			);
+			path = "iWatchNews Extension";
+			sourceTree = "<group>";
+		};
+		466E33951EBC56360099276B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				466E33961EBC56360099276B /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		466F6DEA1E3664D3001FEE5B /* NRNetworkRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +414,8 @@
 				46D7F9DB1E36633200A453E3 /* NewReaderTests */,
 				46D7F9E61E36633300A453E3 /* NewReaderUITests */,
 				462CD6191E3A98E1001ADB0E /* NewsiMsgExtension */,
+				466E33851EBC56360099276B /* iWatchNews */,
+				466E33941EBC56360099276B /* iWatchNews Extension */,
 				46D7F9C21E36633200A453E3 /* Products */,
 				85A29BE8C4AF6E0340060542 /* Pods */,
 				CF456856C3C6E66BF027488D /* Frameworks */,
@@ -326,6 +429,8 @@
 				46D7F9D81E36633200A453E3 /* NewReaderTests.xctest */,
 				46D7F9E31E36633300A453E3 /* NewReaderUITests.xctest */,
 				462CD6161E3A98E1001ADB0E /* NewsiMsgExtension.appex */,
+				466E33841EBC56360099276B /* iWatchNews.app */,
+				466E33901EBC56360099276B /* iWatchNews Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -417,6 +522,40 @@
 			productReference = 462CD6161E3A98E1001ADB0E /* NewsiMsgExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
+		466E33831EBC56360099276B /* iWatchNews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466E33A91EBC56360099276B /* Build configuration list for PBXNativeTarget "iWatchNews" */;
+			buildPhases = (
+				466E33821EBC56360099276B /* Resources */,
+				466E33A81EBC56360099276B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				466E33931EBC56360099276B /* PBXTargetDependency */,
+			);
+			name = iWatchNews;
+			productName = iWatchNews;
+			productReference = 466E33841EBC56360099276B /* iWatchNews.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		466E338F1EBC56360099276B /* iWatchNews Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 466E33A71EBC56360099276B /* Build configuration list for PBXNativeTarget "iWatchNews Extension" */;
+			buildPhases = (
+				466E338C1EBC56360099276B /* Sources */,
+				466E338D1EBC56360099276B /* Frameworks */,
+				466E338E1EBC56360099276B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iWatchNews Extension";
+			productName = "iWatchNews Extension";
+			productReference = 466E33901EBC56360099276B /* iWatchNews Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		46D7F9C01E36633200A453E3 /* NewReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 46D7F9EC1E36633300A453E3 /* Build configuration list for PBXNativeTarget "NewReader" */;
@@ -428,11 +567,13 @@
 				C2F6984AE4716891AB740C5A /* [CP] Embed Pods Frameworks */,
 				FE744045D912D0EE8BBD9BC4 /* [CP] Copy Pods Resources */,
 				462CD6281E3A98E1001ADB0E /* Embed App Extensions */,
+				466E33AA1EBC56360099276B /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				462CD6231E3A98E1001ADB0E /* PBXTargetDependency */,
+				466E33A11EBC56360099276B /* PBXTargetDependency */,
 			);
 			name = NewReader;
 			productName = NewReader;
@@ -487,12 +628,20 @@
 		46D7F9B91E36633200A453E3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0820;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Abhishek Thapliyal";
 				TargetAttributes = {
 					462CD6151E3A98E1001ADB0E = {
 						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					466E33831EBC56360099276B = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+					};
+					466E338F1EBC56360099276B = {
+						CreatedOnToolsVersion = 8.3.1;
 						ProvisioningStyle = Automatic;
 					};
 					46D7F9C01E36633200A453E3 = {
@@ -529,6 +678,8 @@
 				46D7F9D71E36633200A453E3 /* NewReaderTests */,
 				46D7F9E21E36633300A453E3 /* NewReaderUITests */,
 				462CD6151E3A98E1001ADB0E /* NewsiMsgExtension */,
+				466E33831EBC56360099276B /* iWatchNews */,
+				466E338F1EBC56360099276B /* iWatchNews Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -540,6 +691,23 @@
 			files = (
 				462CD6201E3A98E1001ADB0E /* Assets.xcassets in Resources */,
 				462CD61E1E3A98E1001ADB0E /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		466E33821EBC56360099276B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466E338A1EBC56360099276B /* Assets.xcassets in Resources */,
+				466E33881EBC56360099276B /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		466E338E1EBC56360099276B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466E339E1EBC56360099276B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -770,6 +938,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		466E338C1EBC56360099276B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				466E339C1EBC56360099276B /* NotificationController.swift in Sources */,
+				466E33AE1EBC65730099276B /* NRArticle.swift in Sources */,
+				466E33B11EBC66A60099276B /* NewsRowController.swift in Sources */,
+				466E33AF1EBC65730099276B /* NRSource.swift in Sources */,
+				466E339A1EBC56360099276B /* ExtensionDelegate.swift in Sources */,
+				466E33AB1EBC5DB20099276B /* NRNetworkManager.swift in Sources */,
+				466E33981EBC56360099276B /* InterfaceController.swift in Sources */,
+				466E33AD1EBC5DB20099276B /* NRHTTPResponse.swift in Sources */,
+				466E33AC1EBC5DB20099276B /* NRHTTPRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		46D7F9BD1E36633200A453E3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -817,6 +1001,16 @@
 			target = 462CD6151E3A98E1001ADB0E /* NewsiMsgExtension */;
 			targetProxy = 462CD6221E3A98E1001ADB0E /* PBXContainerItemProxy */;
 		};
+		466E33931EBC56360099276B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 466E338F1EBC56360099276B /* iWatchNews Extension */;
+			targetProxy = 466E33921EBC56360099276B /* PBXContainerItemProxy */;
+		};
+		466E33A11EBC56360099276B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 466E33831EBC56360099276B /* iWatchNews */;
+			targetProxy = 466E33A01EBC56360099276B /* PBXContainerItemProxy */;
+		};
 		46D7F9DA1E36633200A453E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 46D7F9C01E36633200A453E3 /* NewReader */;
@@ -836,6 +1030,14 @@
 				462CD61D1E3A98E1001ADB0E /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		466E33861EBC56360099276B /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				466E33871EBC56360099276B /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		46D7F9C81E36633200A453E3 /* Main.storyboard */ = {
@@ -892,6 +1094,78 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		466E33A31EBC56360099276B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = iWatchNews_Extension;
+				INFOPLIST_FILE = iWatchNews/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.NewReader.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		466E33A41EBC56360099276B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				DEVELOPMENT_TEAM = "";
+				IBSC_MODULE = iWatchNews_Extension;
+				INFOPLIST_FILE = iWatchNews/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.NewReader.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Release;
+		};
+		466E33A51EBC56360099276B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "iWatchNews Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.NewReader.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
+			};
+			name = Debug;
+		};
+		466E33A61EBC56360099276B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				INFOPLIST_FILE = "iWatchNews Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Marvel.NewReader.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
@@ -1094,6 +1368,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		466E33A71EBC56360099276B /* Build configuration list for PBXNativeTarget "iWatchNews Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E33A51EBC56360099276B /* Debug */,
+				466E33A61EBC56360099276B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		466E33A91EBC56360099276B /* Build configuration list for PBXNativeTarget "iWatchNews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				466E33A31EBC56360099276B /* Debug */,
+				466E33A41EBC56360099276B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		46D7F9BC1E36633200A453E3 /* Build configuration list for PBXProject "NewReader" */ = {
 			isa = XCConfigurationList;
