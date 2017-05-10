@@ -77,7 +77,7 @@ class NRSourcesVC: UIViewController, UICollectionViewDelegate, UICollectionViewD
                                                 "Entertainment",
                                                 "Gaming",
                                                 "Music",
-                                                "Science"]
+                                                "Science","Politics"]
         
         self.segmentedControl?.selectedSegmentIndex = 1
         self.segmentedControl?.backgroundColor = UIColor(red:0.7, green:0.7, blue:0.7, alpha:1.0)
