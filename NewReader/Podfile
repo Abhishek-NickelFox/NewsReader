@@ -4,6 +4,7 @@ use_frameworks!
 target 'NewReader' do
 
   pod 'SDWebImage', '~>3.8'
+  pod 'APIClient',  :git => 'https://github.com/Nickelfox/APIClient.git', :branch => 'develop'
   # Pods for NewReader
 
   target 'NewReaderTests' do

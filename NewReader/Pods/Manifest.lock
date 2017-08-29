@@ -1,14 +1,41 @@
 PODS:
+  - Alamofire (4.5.0)
+  - AnyErrorKit (0.1.0)
+  - APIClient (0.1.1):
+    - Alamofire (~> 4.4)
+    - AnyErrorKit (~> 0.1)
+    - JSONParsing (~> 0.1.2)
+    - SwiftyJSON (~> 3.1)
+  - JSONParsing (0.1.2):
+    - AnyErrorKit (~> 0.1.0)
+    - SwiftyJSON (~> 3.1)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
+  - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
+  - APIClient (from `https://github.com/Nickelfox/APIClient.git`, branch `develop`)
   - SDWebImage (~> 3.8)
 
+EXTERNAL SOURCES:
+  APIClient:
+    :branch: develop
+    :git: https://github.com/Nickelfox/APIClient.git
+
+CHECKOUT OPTIONS:
+  APIClient:
+    :commit: bec731834c92625ae31cb8bf9647a5716cd55a14
+    :git: https://github.com/Nickelfox/APIClient.git
+
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AnyErrorKit: 7ae07b01bbad1333910a2c1dccda8afc8cea6b65
+  APIClient: d27868096e3ca5c56fe8f07558a39bf6f2d7d68c
+  JSONParsing: 19fa4e886a2b8bddeb47169bfa92ecb55862b054
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: e4c7be9150e357480e7f08f82cbe2bd55224529f
+PODFILE CHECKSUM: 1f92d890cd85877eec77696c26e6c23867b3e6c7
 
-COCOAPODS: 1.2.0.beta.3
+COCOAPODS: 1.1.0
