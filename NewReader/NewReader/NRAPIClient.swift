@@ -6,9 +6,21 @@
 //  Copyright © 2017 Abhishek Thapliyal. All rights reserved.
 //
 
-import UIKit
+import Foundation
 import APIClient
+import SwiftyJSON
 
-class NRAPIClient: NSObject {
-
+class FoxAPIClient: APIClient<AuthHeaders, ErrorResponse> {
+	
+	static let shared = FoxAPIClient()
+	
+	override init() {
+		super.init()
+		self.enableLogs = true
+	}
+	
+	override func authenticationHeaders(response: HTTPURLResponse) -> AuthHeaders? {
+		return try? AuthHeaders.parse(JSON(response.allHeaderFields))
+	}
+	
 }

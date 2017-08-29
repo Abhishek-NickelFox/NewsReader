@@ -59,6 +59,10 @@
 		46D7F9DD1E36633200A453E3 /* NewReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D7F9DC1E36633200A453E3 /* NewReaderTests.swift */; };
 		46D7F9E81E36633300A453E3 /* NewReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D7F9E71E36633300A453E3 /* NewReaderUITests.swift */; };
 		46E36F251F555C7A000B9BB3 /* NRAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E36F241F555C7A000B9BB3 /* NRAPIClient.swift */; };
+		46E36F281F5567AE000B9BB3 /* AuthHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E36F271F5567AE000B9BB3 /* AuthHeaders.swift */; };
+		46E36F2A1F5567BB000B9BB3 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E36F291F5567BB000B9BB3 /* ErrorResponse.swift */; };
+		46E36F2C1F55684D000B9BB3 /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E36F2B1F55684D000B9BB3 /* APIRouter.swift */; };
+		46E36F2E1F556A35000B9BB3 /* APIRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E36F2D1F556A35000B9BB3 /* APIRequestManager.swift */; };
 		9A80A215966EF30FC81A5E65 /* Pods_NewReaderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EC3769B633940D4B951A18E /* Pods_NewReaderUITests.framework */; };
 		BC9D66E67473FD70BDD13F67 /* Pods_NewReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 597D7846C3B47A1533F45154 /* Pods_NewReaderTests.framework */; };
 		DF64A3535D52CDD91A95CF7E /* Pods_NewReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCF6B219D938981C69389A42 /* Pods_NewReader.framework */; };
@@ -160,6 +164,10 @@
 		46D7F9E71E36633300A453E3 /* NewReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReaderUITests.swift; sourceTree = "<group>"; };
 		46D7F9E91E36633300A453E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46E36F241F555C7A000B9BB3 /* NRAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRAPIClient.swift; sourceTree = "<group>"; };
+		46E36F271F5567AE000B9BB3 /* AuthHeaders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthHeaders.swift; sourceTree = "<group>"; };
+		46E36F291F5567BB000B9BB3 /* ErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		46E36F2B1F55684D000B9BB3 /* APIRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
+		46E36F2D1F556A35000B9BB3 /* APIRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequestManager.swift; sourceTree = "<group>"; };
 		581D293BAEFE9EEEAE56D959 /* Pods-NewReaderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewReaderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NewReaderUITests/Pods-NewReaderUITests.release.xcconfig"; sourceTree = "<group>"; };
 		597D7846C3B47A1533F45154 /* Pods_NewReaderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewReaderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83C66AED5ECF240AE3852510 /* Pods-NewReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NewReader/Pods-NewReader.debug.xcconfig"; sourceTree = "<group>"; };
@@ -263,7 +271,6 @@
 				466F6DED1E3665A7001FEE5B /* NRNetworkManager.swift */,
 				466F6DEB1E366557001FEE5B /* NRHTTPRequest.swift */,
 				466F6DEF1E366BA1001FEE5B /* NRHTTPResponse.swift */,
-				46E36F241F555C7A000B9BB3 /* NRAPIClient.swift */,
 			);
 			name = NRNetworkRequest;
 			sourceTree = "<group>";
@@ -338,6 +345,7 @@
 				46D7F9D31E36633200A453E3 /* Info.plist */,
 				46D7F9CB1E36633200A453E3 /* NewReader.xcdatamodeld */,
 				466F6DF31E3670BE001FEE5B /* NRDBManager.swift */,
+				46E36F261F556780000B9BB3 /* APIClient */,
 				466CEC3B1E37EB50005804CF /* NRNewsDetail */,
 				46357BD21E37B12F00EC489E /* NRCollectionViewCells */,
 				46357BCA1E371B6900EC489E /* NRViewControllers */,
@@ -363,6 +371,18 @@
 				46D7F9E91E36633300A453E3 /* Info.plist */,
 			);
 			path = NewReaderUITests;
+			sourceTree = "<group>";
+		};
+		46E36F261F556780000B9BB3 /* APIClient */ = {
+			isa = PBXGroup;
+			children = (
+				46E36F271F5567AE000B9BB3 /* AuthHeaders.swift */,
+				46E36F291F5567BB000B9BB3 /* ErrorResponse.swift */,
+				46E36F2B1F55684D000B9BB3 /* APIRouter.swift */,
+				46E36F2D1F556A35000B9BB3 /* APIRequestManager.swift */,
+				46E36F241F555C7A000B9BB3 /* NRAPIClient.swift */,
+			);
+			name = APIClient;
 			sourceTree = "<group>";
 		};
 		85A29BE8C4AF6E0340060542 /* Pods */ = {
@@ -738,9 +758,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				46D7F9CD1E36633200A453E3 /* NewReader.xcdatamodeld in Sources */,
+				46E36F2C1F55684D000B9BB3 /* APIRouter.swift in Sources */,
 				463BBB2E1E392DA000D2BD80 /* HMSegmentedControl.m in Sources */,
+				46E36F2E1F556A35000B9BB3 /* APIRequestManager.swift in Sources */,
 				46357BD41E37B17200EC489E /* NRArticleCollectionViewCell.swift in Sources */,
 				46E36F251F555C7A000B9BB3 /* NRAPIClient.swift in Sources */,
+				46E36F281F5567AE000B9BB3 /* AuthHeaders.swift in Sources */,
 				466F6DF21E36705D001FEE5B /* NRArticle.swift in Sources */,
 				46D7F9C71E36633200A453E3 /* NRMainVC.swift in Sources */,
 				466F6DEE1E3665A7001FEE5B /* NRNetworkManager.swift in Sources */,
@@ -752,6 +775,7 @@
 				466F6DF81E3699AA001FEE5B /* NRSource.swift in Sources */,
 				466CEC3A1E37E593005804CF /* NRSourceDetailVC.swift in Sources */,
 				466F6DEC1E366557001FEE5B /* NRHTTPRequest.swift in Sources */,
+				46E36F2A1F5567BB000B9BB3 /* ErrorResponse.swift in Sources */,
 				466CEC381E37D6A9005804CF /* NRArticleDetailVC.swift in Sources */,
 				46357BCE1E371BB100EC489E /* NRSourcesVC.swift in Sources */,
 			);
