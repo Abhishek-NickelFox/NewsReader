@@ -39,7 +39,7 @@ class NRNetworkManager: NSObject {
         let request : NSMutableURLRequest = NRHTTPRequest.getServerRequest(urlString: URLString, paramString: param)
         NRHTTPResponse.responseWithRequest(request: request, requestTitle: "FETCH_ARTICLES", completion: { (json, error) in
         
-            print("ERROR :: \(error?.localizedDescription)")
+            print("ERROR :: \(error?.localizedDescription ?? "")")
             self.articleArray = NSMutableArray()
             if (error == nil)
             {
@@ -73,7 +73,7 @@ class NRNetworkManager: NSObject {
         let request : NSMutableURLRequest = NRHTTPRequest.getServerRequest(urlString: URLString, paramString: param)
         NRHTTPResponse.responseWithRequest(request: request, requestTitle: "FETCH_SOURCES", completion: { (json, error) in
             
-            print("ERROR :: \(error?.localizedDescription)")
+            print("ERROR :: \(error?.localizedDescription ?? "")")
             self.sourceArray = NSMutableArray()
             if (error == nil)
             {

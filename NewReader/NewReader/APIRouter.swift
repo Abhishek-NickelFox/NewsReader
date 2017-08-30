@@ -12,6 +12,8 @@ import APIClient
 enum APIRouter: Router {
 	
 	case demo
+	case articles(source: String , sortBy: String, apiKey: String)
+	case sources(language: String)
 	
 	var keypathToMap: String? {
 		return nil
@@ -37,6 +39,14 @@ enum APIRouter: Router {
 		switch self {
 		case .demo:
 			return [:]
+		case .articles(let source , let sortBy, let apiKey):
+			var param: [String: Any] = [:]
+			param["apiKey"] = apiKey
+			param["sortBy"] = sortBy
+			param["source"] = source
+			return param
+		case .sources(let language):
+			return ["language": language]
 		}
 	}
 
@@ -44,12 +54,18 @@ enum APIRouter: Router {
 		switch self {
 		case .demo:
 			return "/get"
+		case .articles:
+			return "/v1/articles"
+		case .sources:
+			return "/v1/sources"
 		}
 	}
 
 	var method: HTTPMethod {
 		switch self {
 		case .demo:
+			return .post
+		case .articles, .sources:
 			return .get
 		}
 	}

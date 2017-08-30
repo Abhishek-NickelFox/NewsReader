@@ -16,6 +16,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+		
+		FoxAPIClient.getArticles { articleResponse in
+			
+//			if let articles = articleResponse.value?.articles {
+//				for news in articles {
+//					print("NEWS \(news.title)")
+//				}
+//				
+//			}
+			
+			switch articleResponse {
+			
+			case .success(let response):
+				for news in response.articles {
+					print("NEWS \(news.title)")
+				}
+			case .failure(let error):
+				print("ERROR \(error.localizedDescription)")
+				break
+			}
+			
+		}
+		
+//		FoxAPIClient.getSources { (sources) in
+//			if let sources = sources.value?.sources {
+//				for source in sources {
+//					print("SOURCE \(source.name)")
+//				}
+//			}
+//		}
+		
         return true
     }
 
